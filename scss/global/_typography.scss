@@ -1,0 +1,14 @@
+
+
+:root {
+  --font-size: 15px;
+}
+@font-face {
+  font-family: 'inter';
+  src: url(../assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+$weight: (
+  'bold': 700,
+  'normal': 400,
+  'bolder': 800
+)

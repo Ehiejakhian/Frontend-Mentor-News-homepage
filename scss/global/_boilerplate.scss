@@ -1,0 +1,45 @@
+@use '../global/layout' as l;
+@use '../util/mixins' as m;
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'inter';
+}
+
+body {
+  min-height: 100dvh;
+  font-size: var(--font-size);
+  padding: 20px;
+  @include m.df(center, center, column, 25px);
+  >* {
+    width: 100%;
+    max-width: 1200px;
+  }
+}
+main {
+  @include m.df(normal, normal, column, 50px 25px);
+
+  @media (min-width: l.$tab) {
+    display: grid;
+    grid-template-columns: auto minmax(250px, 350px);
+  }
+}
+img {
+  width: 100%;
+  &.mobile {
+    display: block;
+  }
+  &.desktop {
+    display: none;
+  }
+  @media (min-width: l.$tab) {
+    &.mobile {
+      display: none
+    }
+    &.desktop {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,96 @@
+@use '../util/mixins' as m;
+@use '../global/colors' as c;
+@use '../global/layout' as l;
+
+header {
+  @include m.df(space-between, center);
+  
+  input {
+    display: none;
+  }
+  img.logo, .icon-menu-open {
+    width: auto;
+  }
+  img.logo {
+    width: clamp(3rem, 5dvw, 4rem);
+  }
+  nav {
+    transition: all .75s;
+    padding: 20px;
+    @include m.df(normal, normal, column, 70px);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: -100%;
+    width: 60dvw;
+    background-color: #fff;
+    z-index: 10;
+  
+    label {
+      @include m.df(right, center);
+      & img {
+        width: auto;
+        align-self: flex-end;
+      }
+    }
+
+    ul {
+      @include m.df(normal, start, column, 20px);
+      list-style: none;
+      li {
+        a {
+          text-decoration: none;
+          color: c.$very-dark-blue;
+          font-size: 18px;
+        }
+      }
+    }
+  
+  }
+  input:checked ~ nav{
+    right: 0;
+  }
+  .overlay {
+    position: fixed;
+    right: -100%;
+    transition: all .75s;
+  }
+  input:checked ~ .overlay {
+    z-index: 9;
+    position: fixed;
+    top: 0;
+    width: 100dvw;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,.3);
+  }
+
+
+  @media (min-width: l.$tab) {
+    input, label, .overlay {
+      display: none;
+    }
+    nav {
+      position: static;
+      padding: 0;
+      gap: 0;
+      & label {
+        display:none;
+      }
+      & ul {
+        @include m.df(right, start,  row, 2rem);
+        li {
+          a {
+            color: c.$grayish-blue;
+            font-size: 1rem;
+            transition: all .3s;
+            &:hover {
+              color: c.$soft-red;
+            }
+          }
+        }
+      }
+    }
+  }
+}

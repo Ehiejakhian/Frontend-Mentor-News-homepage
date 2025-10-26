@@ -1,0 +1,33 @@
+
+@use '../util/mixins' as m;
+@use '../global/colors' as c;
+@use '../global/layout' as l;
+
+.new {
+  background-color: c.$very-dark-blue;
+  color: #fff;
+  padding: 20px;
+
+  h2 {
+    color: c.$soft-orange;
+    font-size: clamp(1.5rem, 5dvw, 3rem);
+  }
+  h3 {
+    margin: 20px 0 10px 0;
+    transition: all .3s;
+    &:hover {
+      color: c.$soft-orange;
+    }
+  }
+  p {
+    color: c.$grayish-blue;
+    line-height: 1.6;
+    &:not(:last-of-type) {
+      padding-bottom: 20px;
+      border-bottom: 1px solid c.$grayish-blue;
+    }
+  }
+  @media (min-width: l.$tab) {
+    
+  }
+}

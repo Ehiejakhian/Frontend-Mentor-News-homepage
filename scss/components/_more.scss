@@ -1,0 +1,44 @@
+@use '../util/mixins' as m;
+@use '../global/colors' as c;
+@use '../global/layout' as l;
+
+.more {
+  @include m.df(normal, normal, column, 30px);
+  
+  &__item {
+    @include m.df(normal,normal, row, 20px);
+    img {
+      flex: 1;
+      width: 100px;
+    }
+    &__content {
+      flex: 3;
+      @include m.df(normal,normal, column, 10px);
+      h2 {
+        color: c.$soft-red;
+        font-size: clamp(1.5rem, 5dvw, 2rem);
+      }
+      h3 {
+        font-weight: 800;
+        color: c.$very-dark-blue;
+        transition: all .3s;
+        &:hover {
+          color: c.$soft-red
+        }
+      }
+      p {
+        line-height: 1.6;
+        color: c.$dark-grayish-blue;
+      }
+
+    }
+  }
+
+  @media (min-width: l.$tab) {
+    grid-column: 1/-1;
+    @include m.df(normal, normal, row, 25px);
+    >* {
+      flex: 1;
+    }
+  }
+}

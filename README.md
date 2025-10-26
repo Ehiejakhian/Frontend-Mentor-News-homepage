@@ -39,8 +39,8 @@ I know, It doesn't match it very much, or even at all. I gave it my all though.
 
 
 ### Links
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [My Solution](https://github.com/Ehiejakhian/Frontend-Mentor-News-homepage)
+- Live Site URL: [Live Site](https://ehiejakhian.github.io/Frontend-Mentor-News-homepage)
 
 ## My process
 I started this one by opening the design images in GIMP (GNU Image Manipulation Program). I measure the paddings, gutters (gaps) and sizes of responsive elements. These help me create responsive functions and mixins. Then, I write my HTML, and give class names using BEM which I recently learned. I use SCSS to create my styling so BEM makes it easier.
@@ -193,8 +193,8 @@ I would love to get this design perfect one day. Any help with this please chat 
 
 ### Useful resources
 
-- [Jessie Chan's "How I organise my SASS projects"](https://www.example.com) - This helped me creat a quite wonderful folder structure. I really liked this pattern and will use it going forward.
-- [Coding2Go's "Create a Responsize navbar - a CSS only solution"](https://www.example.com) - This is an amazing video that I'll recommend to all out there who want to use only CSS to create nav-bars and make their lives simpler.
+- [Jessie Chan's "How I organise my SASS projects"](https://www.youtube.com/watch?v=LQsjNmkqUOc&list=PPSV) - This helped me creat a quite wonderful folder structure. I really liked this pattern and will use it going forward.
+- [Coding2Go's "Create a Responsize navbar - a CSS only solution"](https://youtu.be/8eFeIFKAKHw?si=GzljC16g9cEAOXLY) - This is an amazing video that I'll recommend to all out there who want to use only CSS to create nav-bars and make their lives simpler.
 
 ## Acknowledgments
 
